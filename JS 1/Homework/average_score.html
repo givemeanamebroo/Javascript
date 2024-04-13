@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{font-size: 20px}
+</style>
+<body>
+<script>
+    let vatli = prompt('Điểm Vật lý');
+    let hoahoc = prompt('Điểm Hóa học');
+    let sinhhoc = prompt('Điểm Sinh học');
+    vatli = parseInt(vatli);
+    hoahoc = parseInt(hoahoc);
+    sinhhoc = parseInt(sinhhoc);
+    document.write('Điểm Vật lý:' + vatli + '<br><hr>');
+    document.write('Điểm Hóa học:' + hoahoc + '<br><hr>');
+    document.write('Điểm Sinh học:' + sinhhoc + '<br><hr>');
+    document.write('Điểm Trung bình:' + (vatli + sinhhoc + hoahoc) / 3 + '<br><hr>');
+    document.write('Tổng điểm:' + (vatli + sinhhoc + hoahoc) + '<hr>')
+</script>
+</body>
+</html>
