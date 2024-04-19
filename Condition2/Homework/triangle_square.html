@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Cạnh thứ nhất:" id="1st">
+<hr>
+<input type="number" placeholder="Cạnh thứ hai:" id="2nd">
+<hr>
+<button onclick="getData()">Tính</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let a = document.getElementById("1st").value;
+        let b = document.getElementById("2nd").value;
+        let c = 0.5 * a * b;
+        document.getElementById("result").innerHTML = "Kết quả:" + " " + c;
+    }
+</script>
+</body>
+</html>

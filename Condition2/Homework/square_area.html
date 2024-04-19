@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập số:" id="input">
+<hr>
+<button onclick="getData()">Tính</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let canh = +document.getElementById("input").value;
+        let dientich = canh * canh;
+        document.getElementById("result").innerHTML = "Kết quả:" +" " + dientich
+    }
+</script>
+</body>
+</html>

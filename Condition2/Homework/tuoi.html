@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Điền tuổi:" id="age">
+<hr>
+<button onclick="getData()">Nhập</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let a = document.getElementById("age").value;
+        if (a >= 0 && a <= 120) {
+            document.getElementById("result").innerHTML = a + " " + "tuổi"
+        } else {
+            alert("Lỗi")
+        }
+    }
+</script>
+</body>
+</html>

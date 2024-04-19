@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Chiều ngang:" id="width">
+<hr>
+<input type="number" placeholder="Chiều dọc:" id="length">
+<hr>
+<button onclick="getData()">Tính</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let a = document.getElementById("width").value;
+        let b = document.getElementById("length").value;
+        let c = a * b;
+        document.getElementById("result").innerHTML = "Kết quả:" +" "+ c;
+    }
+</script>
+</body>
+</html>

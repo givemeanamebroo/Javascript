@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="Nhập vào đây:" required>
+<button onclick="chuyenDoi()">Nhập</button>
+<h2 id="result"></h2>
+<script>
+    function chuyenDoi() {
+        let m = +document.getElementById("input").value;
+        let ft = m * 3.2808;
+        document.getElementById("result").innerHTML = 'Kết quả:' + ft + 'feet';
+    };
+</script>
+</body>
+</html>
