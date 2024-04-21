@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" placeholder="Nhập số thứ nhất:" id="1st">
+<input type="number" placeholder="Nhập số thứ hai:" id="2nd">
+<button onclick="getData()">Enter</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let a = +document.getElementById("1st").value;
+        let b = +document.getElementById("2nd").value;
+        let tich = 1
+        for (let i = a; i <= b; i++) {
+            if (i % 2 == 0 && i % 5 == 0) {
+                 tich = tich * i
+            }
+        }
+        document.getElementById("result").innerHTML = "Tích của các số sau là:" + tich
+    }
+</script>
+</body>
+</html>
