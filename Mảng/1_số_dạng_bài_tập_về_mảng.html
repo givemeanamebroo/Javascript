@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Dạng tìm tích của các phần tử trong mảng
+    let ab = [1, 12, 2000, 4, 1200]
+    let xyz = 1
+    for (let i = 0; i < ab.length; i++) {
+        if (ab[i] % 2 == 0)
+            xyz *= ab[i]
+    }
+    // Dạng bài tạo mảng bằng ô input
+    let arr = []
+    let n = +prompt("Nhập vào số phần tử:")
+    for (let i = 1; i <= n; i++) {
+        pt = +prompt("Nhập vào phần tử thứ" + i);
+        arr.push(pt)
+    }
+    document.write(arr)
+    // Dạng bài tính trung bình cộng của các phần tử trong mảng
+    let tbc = 0
+    let x = 0
+    for (let i = 1; i < ab.length; i++) {
+        if (ab[i] > 1000) {
+            tbc += ab[i];
+            x++
+        }
+    }
+    document.write("TBC của dãy số là:" + tbc / x)
+    // Dạng bài tính giá trị max của các phần tử trong mảng
+    let max = ab[0]
+    for (let i = 0; i < ab.length; i++) {
+        if (max < ab[i]) {
+            max = ab[i]
+        }
+    }
+    document.write(max)
+</script>
+</body>
+</html>

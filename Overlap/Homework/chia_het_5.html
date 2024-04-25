@@ -16,7 +16,8 @@
         let tich = 1
         for (let i = a; i <= b; i++) {
             if (i % 2 == 0 && i % 5 == 0) {
-                 tich = tich * i
+                 tich = tich * i;
+                 console.log(tich)
             }
         }
         document.getElementById("result").innerHTML = "Tích của các số sau là:" + tich

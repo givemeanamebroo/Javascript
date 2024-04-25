@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number" placeholder="Fill in the blank:">
+<button onclick="getData()">Enter</button>
+<h2 id="result"></h2>
+<script>
+    function getData() {
+        let a = +document.getElementById("number").value
+        let giaiThua = 1
+        for (let i = a; i >= 1; i--) {
+            giaiThua = giaiThua * i
+        }
+        document.getElementById("result").innerHTML = a + " " + "!=" + " " + giaiThua
+    }
+</script>
+</body>
+</html>
