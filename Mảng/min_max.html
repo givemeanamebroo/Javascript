@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // ab = [1, 2, 3, 4, 6]
+    // let min = ab[2];
+    // for (let i = 0; i < ab.length; i++) {
+    //     if (min > ab[i]) {
+    //         min = ab[i]
+    //     }
+    // }
+    // document.write(min + "<br>")
+    //
+    // // Giá trị min của các phần tử chẵn
+    // let min_chan = ab[4]
+    // for (let i = 0; i < ab.length; i++) {
+    //     if (min_chan > ab[i] && ab[i] % 2 === 0) {
+    //         min_chan = ab[i]
+    //     }
+    // }
+    // document.write(min_chan + "<br>")
+
+    // Giá trị lớn thứ hai giữa các phần tử trong mảng
+    bc = [1, 2, 3, 4, 4, 5, 5, 5]
+    // let max_2 = bc[0]
+    // for (let i = 0; i < bc.length; i++) {
+    //     if (max_2 < bc[i]) {
+    //         max_2 = bc[i]
+    //     }
+    //     document.write(max_2)
+    // }
+    ac = [1, 2, 10, 4, 5, 6, 7, 8]
+    let kq = "Mang tang dan"
+    for (let i = 0; i < ac.length - 1; i++) {
+        if (ac[i + 1] < ac [i]) {
+            kq = "Mang khong tang dan"
+        }
+    }
+    document.write(kq)
+</script>
+</body>
+</html>
