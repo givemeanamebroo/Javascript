@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="so" placeholder="Nhập số:">
+<button onclick="them()">Them</button>
+<button onclick="dem()">Dem</button>
+<div id="kq"></div>
+<h2 id="result"></h2>
+<script>
+    let arr = []
+    function them() {
+        let pt = document.getElementById("so").value;
+        arr.push(pt);
+        let str = '';
+        for (let i = 0; i < arr.length ; i++) {
+            str += arr[i] + "<br>"
+        }
+        document.getElementById("kq").innerHTML = str;
+        document.getElementById("so").value = '';
+    }
+    function dem() {
+        let d = 0
+        for (let i = 0; i < arr.length ; i++) {
+            d++
+        }
+        document.getElementById("result").innerHTML = d
+    }
+</script>
+</body>
+</html>

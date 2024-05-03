@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function b6(arr) {
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                sum += arr[i]
+            }
+        }
+        return sum
+    }
+
+    function b7(arr) {
+        let count = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                count++
+            }
+        }
+        return count;
+    }
+
+    function b8(arr) {
+        let sum = b6(arr);
+        let count = b7(arr);
+        return sum / count;
+    }
+
+    let arr = [33, 34, 35, 13, 15, 10, 9, 7]
+
+    document.write("Tổng các phần tử trong hàm là:" + " " + b6(arr) +  "<br>")
+    document.write("Số các phần tử trong hàm là:" + " " + b7(arr) +   "<br>")
+    document.write("Trung bình cộng các phần tử trong hàm là:" + " " + b8(arr) + "<br>")
+
+
+</script>
+</body>
+</html>
