@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<button onclick="showList()">List</button>
+<button onclick="showAdd()">Add</button>
+<script>
+    let danhMuc = ['Oto', 'Xemay', 'Xedap'];
+    showList()
+
+    function showList() {
+        let str = `<h1>Danh sách sản phẩm </h1>`
+        str += `<h1>Loại phương tiện: ${danhMuc.length}</h1>`
+        for (let i = 0; i < danhMuc.length; i++) {
+            str += `<h1>${danhMuc[i]} <button onclick="showEdit(${i})">Edit</button> </h1>`
+        }
+        document.getElementById("display").innerHTML = str
+    }
+
+    function showAdd() {
+        let str = `<input id="inp"><button onclick="showCreate()">Create</button>`
+        document.getElementById("display").innerHTML = str
+    }
+
+
+    function showCreate() {
+        danhMuc.push(document.getElementById("inp").value)
+        showList()
+    }
+
+    function showEdit(index) {
+        let str = `<input id="inp" value = "${danhMuc[index]}"> <button onclick="showSave(${index})">Save</button><button onclick="showRemove(${index})">Remove</button>`;
+        document.getElementById("display").innerHTML = str
+    }
+
+    function showSave(index) {
+        danhMuc[index] = document.getElementById("inp").value;
+        showList()
+    }
+
+    function showRemove(index) {
+        delete danhMuc[index]
+        showList()
+    }
+</script>
+</body>
+</html>
