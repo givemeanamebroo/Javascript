@@ -16,7 +16,7 @@
         let str = `<h1>Danh sách sản phẩm </h1>`
         str += `<h1>Loại phương tiện: ${danhMuc.length}</h1>`
         for (let i = 0; i < danhMuc.length; i++) {
-            str += `<h1>${danhMuc[i]} <button onclick="showEdit(${i})">Edit</button> </h1>`
+            str += `<h1><b>${i + 1}. </b>${danhMuc[i]} <button onclick="showEdit(${i})">Edit</button> </h1>`
         }
         document.getElementById("display").innerHTML = str
     }
@@ -43,7 +43,7 @@
     }
 
     function showRemove(index) {
-        delete danhMuc[index]
+        danhMuc[index-1] = danhMuc.splice(0,1)
         showList()
     }
 </script>
