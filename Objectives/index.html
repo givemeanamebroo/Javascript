@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let sp = [{
+    //     name: "A",
+    //     price: 60,
+    //     quantity: 30,
+    // }, {
+    //     name: "B",
+    //     price: 40,
+    //     quantity: 80,
+    // }, {
+    //     name: "C",
+    //     price: 20,
+    //     quantity: 100,
+    // }
+    // ]
+    // for (let i = 0; i < sp.length; i++) {
+    //     if (sp[i].price >= 40) {
+    //         document.write(sp[i] + "<br>")
+    //     }
+    // }
+    let danhsach = [{
+        name: "a",
+        stt: 1,
+        score: 9,
+    }, {
+        name: "b",
+        stt: 2,
+        score: 4,
+    }, {
+        name: "c",
+        stt: 3,
+        score: 8
+    }]
+
+    for (let i = 0; i < danhsach.length; i++) {
+        document.write(`${danhsach[i].name},${danhsach[i].stt},${danhsach[i].score}  <br>`)}
+    let max = danhsach[0]
+    for (let i = 0; i < danhsach.length; i++) {
+        if (max.score < danhsach[i].score)
+            max = danhsach[i]
+    }
+    document.write(`${max.score} , ${max.name} , ${max.stt}`)
+</script>
+</body>
+</html>

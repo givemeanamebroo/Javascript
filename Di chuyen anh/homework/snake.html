@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="popcat.jpg" alt="" width="100px" style="position: absolute; top:0px; left: 0px" id="">
+<script>
+    function sangPhai() {
+        let son = document.getElementById('v')
+        son.style.left = parseInt(son.style.left) + 20 + 'px'
+    }
+    function sangTrai() {
+        let son = document.getElementById('v')
+        son.style.left = parseInt(son.style.left) - 20 + 'px'
+    }
+    function lenTren() {
+        let son = document.getElementById('v')
+        son.style.top = parseInt(son.style.top) - 20 + 'px'
+    }
+    function xuongDuoi() {
+        let son = document.getElementById('v')
+        son.style.top = parseInt(son.style.top) + 20 + 'px'
+    }
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+        if (e.key === 'ArrowLeft') {
+            sangTrai();
+        }
+        if (e.key === 'd') {
+            sangPhai();
+        }
+        if (e.key === 'w') {
+            lenTren();
+        }
+        if (e.key === 's') {
+            xuongDuoi();
+        }
+    })
+</script>
+</body>
+</html>

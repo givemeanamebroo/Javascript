@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<img src="popcat.jpg" alt="" width="100px" style="position: absolute; top:0px; left: 0px" id="photo">
+<script>
+    let s = 3
+    let s1 = 3
+
+    function hinhCN() {
+        let anh = document.getElementById("photo")
+        anh.style.left = parseInt(anh.style.left) + s + "px"
+        if (parseInt(anh.style.left) >= window.innerWidth - anh.width &&
+            parseInt(anh.style.top) >= 0) {
+            s = 0
+            anh.style.top = parseInt(anh.style.top) + s1 + "px"
+        }
+        if (parseInt(anh.style.top) >= window.innerHeight - anh.height) {
+            s1 = 0
+            s = -3
+        }
+        if (parseInt(anh.style.left) <= 0 && parseInt(anh.style.top) >= 0) {
+            s = 0
+            s1 = -3
+            anh.style.top = parseInt(anh.style.top) + s1 + "px"
+        }
+        if (parseInt(anh.style.left) <= 0 && parseInt(anh.style.top) <= 0) {
+            s = 3;
+            s = 0;
+        }
+        if (parseInt(anh.style.left) <= 0 && parseInt(anh.style.top) <= 0){
+            s = 3;
+            s1 = 3;
+        }
+    }
+    setInterval(hinhCN, 3
+    )
+</script>
+</body>
+</html>

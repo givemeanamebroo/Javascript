@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let a = +prompt('Nhập a: ');
+    // let b = +prompt('Nhập b: ');
+    // let str = '';
+    //
+    // function x(a, b) {
+    //     for (let i = a; i <= b; i++) {
+    //         if (Math.sqrt(i) % 1 === 0) {
+    //             str += i + " ";
+    //         }
+    //     }
+    //     document.write(str)
+    // }
+    //
+    // x(a, b);
+    let a = +prompt("Số bạn nam:")
+    let b = +prompt("Số bạn nữ:")
+    let khacGioi = 0
+    let dongGioi = Math.floor(Math.abs(a - b) / 2)
+    if (a > b) {
+        khacGioi = b
+    } else {
+        khacGioi = a
+    }
+    document.write(khacGioi+ " ")
+    document.write(dongGioi)
+</script>
+</body>
+</html>

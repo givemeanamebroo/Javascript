@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="popcat.jpg" alt="" width="100px" style="position: absolute; top: 100px; left: 200px" id="photo">
+<button onclick="left()">Left</button>
+<button onclick="right()">Right</button>
+<button onclick="lenTren()">Top</button>
+<button onclick="xuongDuoi()">Bottom</button>
+<script>
+    function left() {
+        let anh = document.getElementById("photo")
+        anh.style.left = parseInt(anh.style.left) + Math.random()*100 + "px"
+    }
+
+    function right() {
+        let anh = document.getElementById("photo")
+        anh.style.left = parseInt(anh.style.left) - Math.random()*100 + "px"
+    }
+    function lenTren() {
+        let anh = document.getElementById("photo")
+        anh.style.top = parseInt(anh.style.top) - Math.random()*100 + "px"
+    }
+    function xuongDuoi() {
+        let anh = document.getElementById("photo")
+        anh.style.top = parseInt(anh.style.top) + Math.random()*100 + "px"
+    }
+</script>
+</body>
+</html>

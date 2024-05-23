@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="popcat.jpg" alt="" width="100px" style="position: absolute; top:0px; left: 0px" id="v">
+<script>
+    let w = 3
+    let h = 0
+    let itachi = document.getElementById('v')
+    setInterval(() => {
+        itachi.style.left = parseInt(itachi.style.left) + w + "px"
+        itachi.style.top = parseInt(itachi.style.top) + h + 'px'
+        if ( parseInt(itachi.style.left)>= window.innerWidth - itachi.width) {
+            itachi.style.left = '0px';
+        }
+    }, 10)
+    function sangPhai() {
+        w = 3;
+        h = 0;
+    }
+    function sangTrai() {
+        w = -3;
+        h = 0;
+    }
+    function lenTren() {
+        w = 0;
+        h = -3;
+    }
+    function xuongDuoi() {
+        w = 0;
+        h = 3;
+    }
+    window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+        if (e.key === 'a') {
+            sangTrai();
+        }
+        if (e.key === 'd') {
+            sangPhai();
+        }
+        if (e.key === 'w') {
+            lenTren();
+        }
+        if (e.key === 's') {
+            xuongDuoi();
+        }
+    })
+</script>
+</body>
+</html>

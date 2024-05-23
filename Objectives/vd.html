@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Car {
+        name;
+        color;
+        constructor(nameInput, colorInput) {
+            this.name = nameInput;
+            this.color = colorInput;
+        }
+
+        run() {
+            console.log("Xe o to dang chay");
+        }
+    }
+
+    let oTo = new Car("Mec", "Do");
+    alert(oTo.name);
+    oTo.name = "Audo";
+    alert(oTo.name);
+     oTo.run();
+</script>
+</body>
+</html>

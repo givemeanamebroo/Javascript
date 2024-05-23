@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Ảnh đi từ trái sang phải, gặp phải thì ngay lập tức chui ra từ bên trái và tiếp tục chạy-->
+<img src="popcat.jpg" alt="" width="100px" style="position: absolute; top: 100px; left: -100px" id="photo">
+<script>
+    let s = 3
+    let pos = 0
+    setInterval(() => {
+            let anh = document.getElementById("photo")
+            anh.style.left = parseInt(anh.style.left) + s + "px"
+            if (parseInt(anh.style.left) >= window.innerWidth) {
+                pos = -anh.width
+            } else {
+                pos += s
+            }
+            anh.style.left = pos + "px"
+        }, 3
+    )
+</script>
+</body>
+</html>
