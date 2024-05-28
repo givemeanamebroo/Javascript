@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="toString" placeholder="Nhập dãy kí tự cho phép:">
+<button id="click" onclick="countUpperCase()">Đếm</button>
+<div id="result"></div>
+<script>
+    function countUpperCase() {
+        let count = 0;
+        let str = document.getElementById("toString").value
+        for(let i = 0; i < str.length; i++) {
+            if(str[i] === str[i].toUpperCase() && str[i] !== str[i].toLowerCase()) {
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = "Số lượng ký tự in hoa: " + count
+    }
+</script>
+</body>
+</html>

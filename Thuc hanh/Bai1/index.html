@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính hiệu tổng các phần tử lẻ và tổng các phần tử chẵn</h2>
+
+<p>Nhập mảng (các số ngăn cách bởi dấu phẩy):</p>
+<input type="text" id="inputArray" value="">
+<br><br>
+<button onclick="calculateDifference()">Tính hiệu</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateDifference() {
+        let arr = document.getElementById("inputArray").value.split(",").map(Number);
+        let sumEven = 0;
+        let sumOdd = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                sumEven += arr[i];
+            } else {
+                sumOdd += arr[i];
+            }
+        }
+
+        let diff = sumOdd - sumEven;
+
+        document.getElementById("result").innerHTML = "Hiệu giữa tổng số lẻ và tổng số chẵn là: " + diff;
+    }
+</script>
+</body>
+</html>
